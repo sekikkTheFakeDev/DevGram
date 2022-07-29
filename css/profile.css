@@ -1,0 +1,349 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    width: 90%;
+    height: 90%;
+    background: #DCDCDC;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.upper {
+    width: 80%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileimg {
+    width: 150px;
+    aspect-ratio: 1/1;
+    border: 4px solid rgba(0,0,0,.5);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.profileimg:hover::before {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.profileimg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+.us {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#username {
+    width: 70%;
+    font-size: 18px;
+    font-family: Spline Sans;
+    background: none;
+    border: 3px solid rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 15px 10px;
+    outline: none;
+}
+
+.lower {
+    width: 80%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mail {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hinp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+input {
+    width: 75%;
+    font-size: 18px;
+    font-family: Spline Sans;
+    background: none;
+    border: 3px solid rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 15px 10px;
+    outline: none;
+}
+
+.error {
+    position: absolute;
+    font-family: Spline Sans;
+    color: #fb1a1a;
+    left: 12%;
+    top: 70%;
+}
+
+.passwords {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+.button {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Spline Sans;
+    gap: 30%;
+}
+
+.button .lgbtn {
+    display: none;
+}
+
+.save {
+    background: -webkit-linear-gradient(left, #582BC7, #6F41DF);
+    background: -moz-linear-gradient(left, #582BC7, #6F41DF);
+    background: linear-gradient(to right, #582BC7, #6F41DF);
+    font-family: Poppins;
+    font-weight: 600;
+    color: white;
+    padding: 14px 34px;
+    border-radius: 100px;
+    transition: background 150ms ease-in-out, color 150ms ease-in-out;
+    cursor: pointer;
+}
+
+.d {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 100;
+}
+
+.imgbox {
+    width: 50%;
+    height: 70%;
+    background: #DCDCDC;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Spline Sans;
+    position: relative;
+}
+
+.ex {
+    position: absolute;
+    top: 2%;
+    left: 92%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.images {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smaller {
+    width: 67%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+.save {
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+}
+
+.save:hover {
+    transform: scale(1.05)
+}
+
+.gridimage {
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 10px;
+    transition: transform 50ms ease-in-out;
+}
+
+.gi1 {
+    background-image: url(https://pomocniludzie.pl/wp-content/uploads/2022/03/anonymous-czyli-hakerzy-z-misja.jpg);
+}
+
+.gi2 {
+    background-image: url(https://pbs.twimg.com/profile_images/1301439962915770368/ySTgkik-_400x400.jpg);
+}
+
+.gi3 {
+    background-image: url(https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg);
+}
+
+.gi4 {
+    background-image: url(https://images.easytechjunkie.com/green-lit-numbers.jpg)
+}
+
+.gridimage:hover {
+    transform: scale(1.02);
+}
+
+.save {
+    font-weight: 600;
+}
+
+
+
+/* -----------------RESPONSIVE-------------- */
+
+@media (max-width: 1024px) {
+
+    .profileimg {
+        width: 100px;
+    }
+
+    .smaller {
+        width: 90%;
+        height: 30%;
+    }
+
+    input {
+        font-size: 16px;
+        width: 65%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .profileimg {
+        width: 100px;
+    }
+
+    .imgbox {
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .smaller {
+        width: 90%;
+        height: 30%;
+    }
+
+    .button .lgbtn {
+        display: block;
+    }
+
+    .button {
+        gap: 10%;
+    }
+
+
+    input {
+        font-size: 16px;
+        width: 65%;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .profile {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .profileimg {
+        width: 100px;
+        border-width: 3px;
+    }
+
+    .smaller {
+        width: 25%;
+        height: 80%;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .button .lgbtn {
+        display: block;
+    }
+
+    .button {
+        gap: 10%;
+    }
+
+    .save, .lgbtn {
+        font-size: 14px
+    }
+
+
+    .imgbox {
+        width: 100%;
+        height: 90%;
+        border-radius: 10px;
+    }
+
+    input, #username {
+        font-size: 14px;
+        width: 80%;
+        padding: 10px 5px;
+    }
+
+}

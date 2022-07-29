@@ -1,0 +1,776 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.leftside {
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(180.01deg, #572BC6 0.01%, #6E41DF 99.99%);
+    border-right: 3px solid #C7C7C7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.username {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.image {
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-size: cover;
+    background-position: center;
+}
+
+.user {
+    font-family: Spline Sans;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.navigation {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    gap: 25px;
+}
+
+.element {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 25px;
+    aspect-ratio: 1/1;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-family: Spline Sans;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 150ms ease-in-out;
+}
+
+.element a:hover, .element a:focus-visible {
+    transform: scale(1.05);
+}
+
+.element a i {
+    font-size: 1.1em;
+}
+
+.logout {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.lgbtn {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #FF4444;
+    padding: 10px 30px;
+    border-radius: 100px;
+    border: 4px solid #FF4444;
+    transition: background 150ms ease-in-out, color 150ms ease-in-out;
+    cursor: pointer;
+}
+
+.lgbtn:hover, .lgbtn:focus-visible {
+    color: white;
+    background: #FF4444;
+}
+
+.news {
+    width: 40%;
+    height: 100%;
+    border-left: 3px solid #C7C7C7;
+}
+
+.newpost {
+    width: 100%;
+    height: 20%;
+    border-bottom: 5px solid #C7C7C7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 93%;
+    height: 80%;
+    background: #DCDCDC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inph {
+    width: 100%;
+    height: 60%;
+}
+
+.box textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: start;
+    font-family: Spline Sans;
+    font-size: 20px;
+    border: none;
+    background: none;
+    padding: 15px;
+    outline: none;
+    resize: none;
+}
+
+.box textarea::placeholder {
+    font-weight: bold;
+}
+
+.btnh {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.postbtn {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px 30px;
+    border-radius: 100px;
+    color: white;
+    background: -webkit-linear-gradient(left, #582BC7, #6F41DF);
+    background: -moz-linear-gradient(left, #582BC7, #6F41DF);
+    background: linear-gradient(to right, #582BC7, #6F41DF);
+    cursor: pointer;
+    transition: transform 150ms ease-in-out;
+}
+
+.postbtn:hover {
+    transform: scale(1.05)
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: overlay;
+}
+
+
+.posts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.postelement {
+    --padding: 25px;
+    width: calc(93% - var(--padding)*2);
+    height: max-content;
+    background: #DCDCDC;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 var(--padding);
+}
+
+.info , .likcom{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.usr {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.usrimage {
+    width: 32px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-size: cover;
+    background-position: center;
+}
+
+.usrname, .ptime {
+    font-family: Spline Sans;
+    font-weight: bold;
+}
+
+.usrname {
+    font-size: 18px;
+}
+
+.ptime {
+    color: rgba(0,0,0,.5);
+    font-size: 14px;  
+}
+
+.postcont {
+    width: 100%;
+    height: max-content;
+}
+
+.ptext {
+    word-wrap: break-word;
+    margin: 0;
+    font-family: Spline Sans;
+    font-size: 16px;
+}
+
+.lik, .com {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: Spline Sans;
+    font-size: 18px;
+}
+
+.liked {
+    color: #C22D0D;
+}
+
+.licon, .cicon {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.licon i {
+    pointer-events: none;
+}
+
+.cicon i {
+    pointer-events: none;
+}
+
+
+
+.title {
+    width: 100%;
+    height: 10%;
+    font-family: Poppins;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,.2);
+    margin: 0;
+}
+
+.newscont {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: overlay;
+    gap: 30px;
+}
+
+.newselem {
+    width: 93%;
+    height: max-content;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.holder {
+    padding: 15px 0;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    backdrop-filter: blur(3px);
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.7);
+    color: white;
+    border-radius: 15px;
+}
+
+.nimg {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 15px 0 0 15px;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.texthldr {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Spline Sans;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.ntitle {
+    font-weight: bold;
+    text-decoration: none;
+    color: #00a2ff;
+    text-shadow: 0 0 20px black;
+    transition: color 150ms ease-in-out
+}
+
+.ntitle:hover, .ntitle:focus-visible {
+    color: #6ea3ff;
+}
+
+.ndesc {
+    font-size: 11px;
+}
+
+.texthldr p {
+    margin: 0;
+}
+
+.seemore {
+    text-decoration: none;
+}
+
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 100;
+}
+
+.cbox {
+    width: 40%;
+    height: 90%;
+    padding: 20px 0;
+    background: #DCDCDC;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.x {
+    position: absolute;
+    font-size: 30px;
+    left: 94%;
+    top: 1%;
+    cursor: pointer;
+}
+
+.cpost {
+    --padding: 25px;
+    width: calc(100% - var(--padding)*2);
+    height: max-content;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 var(--padding);
+}
+
+.newcomm {
+    width: 100%;
+    height: max-content;
+    background-color: #C8C7C7;
+    box-shadow: inset 0 0 10px rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Spline Sans;
+    padding: 20px 0;
+}
+
+.ihold {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinp {
+    width: 70%;
+    font-size: 19px;
+    border-radius: 25px;
+    background: white;
+    margin: 0;
+    padding: 8px 10px;
+    outline: none;
+    padding-right: 100px;
+    position: relative;
+}
+
+.cinp:empty::before {
+    content: attr(data-placeholder);
+    pointer-events: none;
+}
+
+.cinp::before {
+    font-weight: bold;
+    color: rgba(0,0,0,.5);
+}
+
+.cpbtn {
+    position: absolute;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+    left: 77%;
+}
+
+.comments {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment {
+    --padding: 25px;
+    width: calc(100% - var(--padding)*2);
+    height: max-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px var(--padding);
+}
+
+.bottom {
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(180.01deg, #572BC6 0.01%, #6E41DF 99.99%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25%;
+    display: none;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* -------------RESPONSIVE-------------- */
+
+@media (max-width: 1440px) {
+    
+    .title {
+        font-size: 40px;
+    }
+
+    .newscont {
+        gap: 70px;
+    }
+
+    .ntitle {
+        font-size: 13px;
+    }
+
+    .ndesc {
+        font-size: 10px;
+    }
+    
+    .newselem {
+        height: 11%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .user {
+        font-size: 15px;
+    }
+
+    .image {
+        width: 30px;
+    }
+
+    .navigation a {
+        font-size: 16px;
+    }
+
+    .lgbtn {
+        font-size: 12px;
+    }
+
+    #newpost {
+        font-size: 18px;
+    }
+
+    .postbtn {
+        font-size: 16px;
+    }
+
+    .usrname {
+        font-size: 17px;
+    }
+
+    .usrimage {
+        width: 30px;
+    }
+
+    .ptime {
+        font-size: 13px;
+    }
+
+    .ptext {
+        font-size: 15px;
+    }
+
+    .lik, .com {
+        font-size: 15px;
+    }
+
+
+    .title {
+        font-size: 30px;
+    }
+
+    .newselem {
+        height: 10%;
+    }
+
+    .texthldr {
+        gap: 3px;
+    }
+
+    .ntitle {
+        font-size: 15px;
+    }
+
+    .ndesc {
+        display: none;
+    }
+
+    .cbox {
+        width: 60%;
+    }
+
+    .cinp::before {
+        font-size: 18px;
+    }
+
+    .cpbtn {
+        font-size: 18px;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .news, .leftside {
+        display: none;
+    }
+
+    .bottom {
+        display: flex;
+    }
+
+    .content {
+        height: 100%;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    #newpost {
+        font-size: 18px;
+    }
+
+    .postbtn {
+        font-size: 16px;
+    }
+
+    .usrimage {
+        width: 30px;
+    }
+
+    .usrname {
+        font-size: 16px;
+    }
+
+    .ptime {
+        font-size: 13px;
+    }
+
+    .ptext {
+        font-size: 15px;
+    }
+
+    .lik, .com {
+        font-size: 16px;
+    }
+
+    .cbox {
+        width: 75%;
+    }
+
+    .cinp::before {
+        font-size: 18px;
+    }
+
+    .cpbtn {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .news, .leftside {
+        display: none;
+    }
+
+    .bottom {
+        display: flex;
+    }
+
+    .content {
+        height: 100%;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    #newpost {
+        font-size: 15px;
+    }
+
+    .postbtn {
+        font-size: 16px;
+    }
+    .usrimage {
+        width: 25px;
+    }
+
+    .usrname {
+        font-size: 16px;
+    }
+
+    .ptime {
+        font-size: 12px;
+    }
+
+    .ptext {
+        font-size: 14px;
+    }
+
+    .lik, .com {
+        font-size: 15px;
+    }
+
+    .cbox {
+        width: 100%;
+    }
+
+    .cinp::before {
+        font-size: 15px;
+    }
+
+    .cpbtn {
+        font-size: 15px;
+    }
+
+}

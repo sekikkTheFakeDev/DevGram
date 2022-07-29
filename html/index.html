@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devgram | Log in</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://kit.fontawesome.com/5355affb26.js" crossorigin="anonymous"></script>
+
+    <script src="../js/Validator.js"></script>
+    <script src="../js/Session.js"></script>
+    <script src="../js/User.js"></script>
+    <script src="../js/app.js" defer></script>
+
+    <link rel="icon" href="../img/logo.svg">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="blur">
+            <div class="box">
+                <div class="x"><i class="fa-solid fa-xmark"></i></div>
+                <div class="text">
+                    <p class="register">Register</p>
+                </div>
+                <form id="registerForm" class="form">
+                    <div class="inph username">
+                        <input type="text" name="username" placeholder="Username">
+                        <div class="error"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="inph email2">
+                        <input type="email" name="email2" placeholder="Email">
+                        <div class="error"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="inph password2">
+                        <input type="password" name="password2" placeholder="Password">
+                        <div class="error"></div>
+                    </div>
+                    <div class="dont">
+                        <button type="submit" class="btn logb">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="glass">
+            <div class="upper">
+                <div class="logo"></div>
+                <h1 class="welcome">Welcome back!</h1>
+            </div>
+            <form id="loginForm" class="form">
+                <div class="inph email">
+                    <input type="email" name="email" placeholder="Email">
+                    <div class="error"></div>
+                </div>
+                <div class="line"></div>
+                <div class="inph password">
+                    <input type="password" name="password" placeholder="Password">
+                    <div class="error"></div>
+                </div>
+                <div class="dont">
+                    <button type="submit" class="btn logb">Log in</button>
+                    <p>Don't have an account? <p id="reg">Register now!</p></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

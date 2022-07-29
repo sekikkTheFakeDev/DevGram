@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+
+/* gradient for button */
+
+/* background: -webkit-linear-gradient(left, #582BC7, #6F41DF);
+background: -moz-linear-gradient(left, #582BC7, #6F41DF);
+background: linear-gradient(to right, #582BC7, #6F41DF); */
+
+:root {
+    --background: #222122;
+    --cyan: #3CA6D5;
+    --line: #572BC6;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    height: 100vh;
+    width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #554e4e;
+    border-radius: 100px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
